@@ -25,6 +25,7 @@ local port 0
 DPD idle timeout (our side) 0
 EOF
 echo "$SSHKEY" > /root/.ssh/id_rsa
+chmod 600 /root/.ssh/id_rsa
 echo "$KNOWNHOSTS" > /root/.ssh/known_hosts
 vpnc vpn
 exec "$@"
