@@ -3,6 +3,7 @@ FROM debian:stable
 RUN apt-get update && apt-get install -y \
     vpnc \
     openssh-client \
+    rsync \
  && rm -rf /var/lib/apt/lists/*
 
 COPY entrypoint.sh /
